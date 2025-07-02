@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('bg.jpg');
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 80px auto;
+      background-color: rgba(255,255,255,0.95);
+      padding: 30px;
+      border: 4px solid black;
+      border-radius: 10px;
+    }
+    h2 {
+      text-align: center;
+      color: #4a90e2;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+    }
+    th, td {
+      padding: 10px;
+      border: 2px solid #333;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .back-btn {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .back-btn a {
+      background-color: #4a90e2;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .back-btn a:hover {
+      background-color: #2c6eb6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Marks Report</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Semester</th>
+          <th>Exam Type</th>
+          <th>Marks Obtained</th>
+          <th>Total Marks</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{MARKS_ROWS}}
+      </tbody>
+    </table>
+
+    <div class="back-btn">
+      <a href="dashboard.php">← Back to Dashboard</a>
+    </div>
+  </div>
+</body>
+</html>

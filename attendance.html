@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Attendance</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('bg.jpg');
+      background-size: cover;
+      padding: 40px;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 3px solid black;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .percentage {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    input[type="date"] {
+      display: block;
+      margin: 10px auto;
+      padding: 5px 10px;
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 2px solid black;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .back-btn {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-btn a {
+      background-color: #4a90e2;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .back-btn a:hover {
+      background-color: #2c6eb6;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Attendance Record</h2>
+    <div class="percentage">Attendance: {{PERCENTAGE}}%</div>
+
+    <form method="get" action="attendance.php">
+      <input type="date" name="date" />
+      <div style="text-align:center;">
+        <button type="submit">Search</button>
+      </div>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ATTENDANCE_ROWS}}
+      </tbody>
+    </table>
+    <div class="back-btn">
+      <a href="dashboard.php">← Back to Dashboard</a>
+    </div>
+  </div>
+</body>
+</html>

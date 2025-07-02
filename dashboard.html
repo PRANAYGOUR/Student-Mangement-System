@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      background-image: url('bg.jpg');
+      background-size: cover;
+    }
+
+    .header {
+      
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .container {
+    
+      max-width: 900px;
+      margin: auto;
+      margin-top: 100px;
+      padding: 20px;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .card {
+      border: 4px solid black;
+      background-color: white;
+      width: 220px;
+      height: 120px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #333;
+      text-decoration: none;
+      text-align: center;
+      
+    }
+
+    .card:hover {
+      
+      background-color: #e3f1ff;
+    }
+
+    .logout {
+      text-align: center;
+      margin-top: 90px;
+    }
+
+    .logout a {
+      background-color:fuchsia;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .logout a:hover {
+      background-color:darkmagenta;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 90%;
+      }
+
+      .header h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+  <h1>Welcome, {{STUDENT_NAME}} 👋</h1>
+</div>
+
+
+  <div class="container">
+    <div class="card-grid">
+      <a href="profile.php" id="profile" class="card">👤
+View Profile</a>
+      <a href="attendance.php" id='attendance' class="card">	&#128197
+ Attendance</a>
+      <a href="marks.php"  id="marks" class="card">📊
+Marks</a>
+      <a href="assignments.php" id="assignments" class="card">📁
+ Assignments</a>
+      <a href="notices.php" id="notices" class="card">🔔
+ Notices</a>
+      <a href="timetable.php" id="timetable" class="card">🕒 Timetable</a>
+    </div>
+
+    <div class="logout">
+      <a href="dashboard.php?logout=1">Logout</a>
+
+    </div>
+  </div>
+
+</body>
+</html>
