@@ -43,7 +43,7 @@ student-portal/
 ├── dashboard.html
 ├── dashboard.php
 ├── db/
-│   └── database.sql
+│   └── login_portal.sql
 ├── login.html
 ├── login.php
 ├── logout.php
